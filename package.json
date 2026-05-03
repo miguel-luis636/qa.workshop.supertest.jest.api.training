@@ -1,0 +1,30 @@
+{
+  "name": "qa.workshop.supertest.jest.api.training",
+  "version": "1.0.0",
+  "description": "repositorio do workshop da Priscila Caime do QualitersClub com o intuito de aprender sobre supertest + jest para automação de api",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest __Test__/**/*.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miguel-luis636/qa.workshop.supertest.jest.api.training.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/miguel-luis636/qa.workshop.supertest.jest.api.training/issues"
+  },
+  "homepage": "https://github.com/miguel-luis636/qa.workshop.supertest.jest.api.training#readme",
+  "dependencies": {
+    "@babel/core": "^7.29.0",
+    "@babel/preset-env": "^7.29.3",
+    "@faker-js/faker": "^10.4.0",
+    "babel-jest": "^30.3.0",
+    "jest": "^30.3.0",
+    "jsonschema": "^1.5.0",
+    "supertest": "^7.2.2"
+  }
+}
