@@ -1,32 +1,42 @@
-// "data": {
-//   "id": 2,
-//   "email": "janet.weaver@reqres.in",
-//   "first_name": "Janet",
-//   "last_name": "Weaver",
-//   "avatar": "https://reqres.in/img/faces/2-image.jpg"
-// }
-
 /**
- * @description Este arquivo gera dados de usuarios fake para a criação e alteração do usuario
+ * @description Este arquivo gera dados de usuários fake no formato da JSONPlaceholder
  */
 
 import { faker } from "@faker-js/faker";
 
 export function criarUsuario() {
   return {
-    nome: faker.person.firstName(),
-    sobrenome: faker.person.lastName(),
+    name: faker.person.fullName(),
+    username: faker.internet.username(),
     email: faker.internet.email(),
-    avatar: faker.image.avatar(),
+
+    address: {
+      street: faker.location.street(),
+      suite: `Apt. ${faker.number.int({ min: 1, max: 999 })}`,
+      city: faker.location.city(),
+      zipcode: faker.location.zipCode(),
+      geo: {
+        lat: faker.location.latitude().toString(),
+        lng: faker.location.longitude().toString(),
+      },
+    },
+
+    phone: faker.phone.number(),
+    website: faker.internet.domainName(),
+
+    company: {
+      name: faker.company.name(),
+      catchPhrase: faker.company.catchPhrase(),
+      bs: faker.company.buzzPhrase(),
+    },
   };
 }
 
-/**
- * @description gera multiplos usuarios fakes
- */
-
+// /**
+//  * @description gera múltiplos usuários fakes
+//  */
 // export const users = faker.helpers.multiple(criarUsuario, {
 //   count: 5,
 // });
 
-  console.log(criarUsuario());
+console.log(criarUsuario());
