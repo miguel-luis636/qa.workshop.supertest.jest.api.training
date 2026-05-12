@@ -8,7 +8,7 @@ describe("Valida a lista de busca de todos os usuários", () => {
     response = await getRequest("/users");
   });
   it("[CT-CONTRATO-002] - Deve validar o contrato da resposta da lista de usuários", () => {
-    const isValid = validateContract(response, contrato);
+    const isValid = validateContract(contrato, response.body);
     expect(isValid).toBe(true);
   });
 });
