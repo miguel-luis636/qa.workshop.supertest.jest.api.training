@@ -26,7 +26,7 @@ describe("Teste funcional da rota /posts", () => {
     postId = post.id;
   });
 
-  it("[CT-FUNCTIONAL-003] Deve buscar um post pelo id obtido dinamicamente", async () => {
+  it("[CT-FUNCTIONAL-002] Deve buscar um post pelo id obtido dinamicamente", async () => {
     expect(postId).toBeDefined();
     const response = await getPostById(postId);
 
@@ -46,7 +46,6 @@ describe("Teste funcional da rota /posts", () => {
     expect(typeof response.body.title).toBe("string");
     expect(typeof response.body.body).toBe("string");
 
-    
     expect(response.body.id).toBe(postId);
   });
 });
