@@ -15,4 +15,14 @@ async function getRequest(path) {
   }
 }
 
-module.exports = { getRequest };
+async function getAllPosts() {
+  return await getRequest("/posts");
+}
+
+
+async function getPostById(id) {
+  return await getRequest(`/posts/${id}`);
+}
+
+
+module.exports = { getRequest, getAllPosts, getPostById };
